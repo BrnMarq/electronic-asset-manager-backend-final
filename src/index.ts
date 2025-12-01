@@ -11,6 +11,8 @@ const app = express();
 
 app.use(
 	cors({
+		origin: "https://electronic-asset-manager-frontend-f.vercel.app/", // Replace with your Vercel frontend domain
+		methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
 		credentials: true,
 	})
 );
