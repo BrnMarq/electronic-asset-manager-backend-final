@@ -13,7 +13,7 @@ import {
 	deleteLocationValidator,
 } from "../validators/location";
 import { authenticatedMiddleware } from "../middlewares/authentication";
-import { roleMiddleware } from "@/middlewares/authorization";
+import { roleMiddleware } from "../middlewares/authorization";
 
 export default (router: express.Router) => {
 	router.get("/locations", authenticatedMiddleware, getLocations);

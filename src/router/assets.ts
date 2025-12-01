@@ -17,7 +17,7 @@ import {
 	getAssetChangelogValidator,
 } from "../validators/assets";
 import { authenticatedMiddleware } from "../middlewares/authentication";
-import { roleMiddleware } from "@/middlewares/authorization";
+import { roleMiddleware } from "../middlewares/authorization";
 
 export default (router: express.Router) => {
 	router.get("/assets", authenticatedMiddleware, getAssetsValidator, getAssets);
